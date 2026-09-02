@@ -1,4 +1,4 @@
-# 📐 Verificador de Balanceamento de Expressões
+# Verificador de Balanceamento de Expressões
 
 ![Python](https://img.shields.io/badge/Python-3.6%2B-blue)
 ![Status](https://img.shields.io/badge/status-concluído-brightgreen)
@@ -14,7 +14,7 @@ Dados Lineares** — Tecnologia em Análise e Desenvolvimento de Sistemas
 
 ---
 
-## 📋 Sumário
+## Sumário
 
 - [Sobre o projeto](#-sobre-o-projeto)
 - [Regras de balanceamento](#-regras-de-balanceamento)
@@ -30,7 +30,7 @@ Dados Lineares** — Tecnologia em Análise e Desenvolvimento de Sistemas
 
 ---
 
-## 📖 Sobre o projeto
+## Sobre o projeto
 
 Uma expressão matemática é considerada **balanceada** quando todo
 símbolo de abertura possui um fechamento correspondente, respeitando a
@@ -38,7 +38,7 @@ ordem correta de fechamento. Este projeto implementa essa verificação
 de forma eficiente utilizando o princípio **LIFO** (*Last In, First
 Out*) da pilha.
 
-## ✅ Regras de balanceamento
+## Regras de balanceamento
 
 Uma expressão está balanceada se:
 
@@ -47,13 +47,13 @@ Uma expressão está balanceada se:
 
 | Expressão | Resultado |
 |---|:---:|
-| `(a + b)` | ✔️ Balanceada |
-| `{[a * (b + c)]}` | ✔️ Balanceada |
-| `a + {b - [c * d]}` | ✔️ Balanceada |
-| `a + (b` | ❌ Não balanceada |
-| `a + {b - [c * d}` | ❌ Não balanceada |
+| `(a + b)` | Balanceada |
+| `{[a * (b + c)]}` | Balanceada |
+| `a + {b - [c * d]}` | Balanceada |
+| `a + (b` |  Não balanceada |
+| `a + {b - [c * d}` |  Não balanceada |
 
-## ⚙️ Algoritmo
+## Algoritmo
 
 1. Percorre a expressão da esquerda para a direita.
 2. Símbolo de abertura → empilha (`push`).
@@ -78,7 +78,7 @@ def esta_balanceada(expressao: str) -> bool:
     return len(pilha) == 0
 ```
 
-## 🚀 Como executar
+## Como executar
 
 **Pré-requisitos:** Python 3.6+ (sem dependências externas).
 
@@ -88,7 +88,7 @@ cd verificador-balanceamento
 python3 balanceador.py
 ```
 
-## 💻 Exemplos de uso
+## Exemplos de uso
 
 **Modo interativo (terminal):**
 
@@ -108,7 +108,7 @@ esta_balanceada("(a + b)")            # True
 esta_balanceada("a + {b - [c * d}")   # False
 ```
 
-## 📁 Estrutura do projeto
+## Estrutura do projeto
 
 ```
 .
@@ -117,7 +117,7 @@ esta_balanceada("a + {b - [c * d}")   # False
 └── LICENSE           # Licença do projeto (opcional)
 ```
 
-## 🧪 Testes
+##  Testes
 
 Testes embutidos executáveis via comando `testar` no modo interativo,
 cobrindo casos balanceados e não balanceados. Sugestão para expansão:
@@ -140,25 +140,25 @@ if __name__ == "__main__":
     unittest.main()
 ```
 
-## ⏱️ Complexidade
+##  Complexidade
 
 | Complexidade | Valor |
 |---|---|
 | Tempo | O(n) |
 | Espaço | O(n) — pior caso: todos os caracteres são aberturas |
 
-## 🔧 Possíveis melhorias
+##  Possíveis melhorias
 
 - [ ] Ignorar símbolos de agrupamento dentro de strings de texto.
 - [ ] Reportar a posição (índice) do erro de balanceamento.
 - [ ] Suporte a outros pares de símbolos (`<`, `>`).
 - [ ] Cobertura de testes com `pytest` e integração contínua (CI).
 
-## 👤 Autor
+## Autor
 
 **Klaywin Ryan Aquino Dias**
-Estudante de Tecnologia em Análise e Desenvolvimento de Sistemas — IFRN Campus Pau dos Ferros
+Discente do curso de Tecnologia em Análise e Desenvolvimento de Sistemas — IFRN Campus Pau dos Ferros
 
-## 📄 Licença
+## Licença
 
 Este projeto está sob a licença MIT — veja o arquivo `LICENSE` para mais detalhes.
